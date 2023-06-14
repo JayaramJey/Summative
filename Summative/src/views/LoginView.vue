@@ -49,16 +49,8 @@ const loginViaEmail = async () => {
 const registerViaGoogle = async () => {
   const { user } = await signInWithPopup(auth, new GoogleAuthProvider());
   store.user = user;
-  const { cart }  = (await getDoc(doc(firestore, "carts", user.email))).data();
-
-   if (cart.exists) {
-   await setDoc(doc(firestore, "carts", user.email), {cart: []})
-     store.cart = cart;
-   }
-   else {
-   
-     store.cart = cart;
-   }
+  const { cart }  = await (await getDoc(doc(firestore, "carts", user.email))).data();
+  store.cart = cart;
   router.push("/purchase");
 };
 </script>

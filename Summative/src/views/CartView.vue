@@ -4,6 +4,7 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 const store = useStore();
+
 </script>
 
 <template>
@@ -17,12 +18,12 @@ const store = useStore();
 
     <div class="cart-movies">
       <div v-for="movies in store.cart">
+        
         <h1>{{ movies.title }}</h1>
         <img
           class="poster"
           :src="`https://image.tmdb.org/t/p/w500/${movies.poster}`"
         />
-
       </div>
     </div>
   </div>
@@ -37,7 +38,7 @@ const store = useStore();
 .cart-page {
   background-color: black;
   color: white;
-  min-height: 47rem;
+  min-height: 66rem;
   height: 100%;
 }
 
@@ -61,7 +62,7 @@ const store = useStore();
 .page-title {
   background-color: navy;
   color: rgb(173, 148, 4);
-  height:5rem;
+  height: 5rem;
   text-align: center;
   font-size: 4rem;
 }
