@@ -15,11 +15,13 @@
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
 .background-darkening {
   background-color: rgba(0, 0, 0, 0.7);
   height: 100%;
   text-align: center;
 }
+
 .content {
   text-align: center;
   position: relative;

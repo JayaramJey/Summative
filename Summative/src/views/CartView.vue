@@ -23,7 +23,11 @@ const store = useStore();
           class="poster"
           :src="`https://image.tmdb.org/t/p/w500/${movies.poster}`"
         />
-        <img class="remove" @click="store.removeMovieFromCart(index)" src="https://cutewallpaper.org/24/recycle-bin-icon-png/thin-recycle-bin-delete-garbage-comments-recycle-bin-white-icon-transparent-png-980x982-free-download-on-nicepng.png"/>
+        <img
+          class="remove"
+          @click="store.removeMovieFromCart(index)"
+          src="https://cutewallpaper.org/24/recycle-bin-icon-png/thin-recycle-bin-delete-garbage-comments-recycle-bin-white-icon-transparent-png-980x982-free-download-on-nicepng.png"
+        />
       </div>
     </div>
   </div>
@@ -35,6 +39,7 @@ const store = useStore();
   display: grid;
   grid-template-columns: auto auto auto auto auto;
 }
+
 .cart-page {
   background-color: black;
   color: white;
@@ -46,10 +51,11 @@ const store = useStore();
   margin: 1rem;
 }
 
-.remove{
-  width:2rem;
+.remove {
+  width: 2rem;
   margin-left: 1rem;
 }
+
 .poster {
   height: 20rem;
   border: solid white;
@@ -72,10 +78,8 @@ const store = useStore();
   font-size: 4rem;
 }
 
-.movie-title{
+.movie-title {
   position: relative;
-  right:1rem;
+  right: 1rem;
 }
-
-
 </style>

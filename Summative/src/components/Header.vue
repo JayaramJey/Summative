@@ -26,6 +26,7 @@ const router = useRouter();
   text-align: center;
   height: 100%;
 }
+
 .login-page {
   width: 10%;
   height: 60%;
@@ -35,5 +36,6 @@ const router = useRouter();
   left: 13rem;
   top: 1rem;
   font-size: 1rem;
+  font-weight: bold;
 }
 </style>

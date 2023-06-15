@@ -120,6 +120,7 @@ const registerViaGoogle = async () => {
   top: 1rem;
   color: rgba(255, 255, 255, 0.716);
 }
+
 .login-functions {
   display: flex;
   gap: 5rem;
@@ -129,6 +130,7 @@ h1 {
   margin-bottom: 1rem;
   font-family: Roboto;
 }
+
 .google {
   border: solid white;
   background-color: rgba(255, 255, 255, 0.711);
@@ -151,6 +153,7 @@ h1 {
 .email-login {
   margin-top: 3rem;
 }
+
 .email-setup {
   display: flex;
   flex-direction: column;
@@ -164,6 +167,7 @@ input {
   height: 2rem;
   box-shadow: 5px 5px;
 }
+
 .login {
   display: flex;
   flex-direction: column;
@@ -175,7 +179,8 @@ button {
   height: 4rem;
   border-radius: 20px;
   font-size: 1rem;
-  }
+  font-weight: bold;
+}
 
 .register-button {
   position: relative;

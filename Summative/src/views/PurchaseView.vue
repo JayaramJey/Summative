@@ -151,6 +151,7 @@ const getTMDBData = async (url, options, page) => {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
 .menu {
   font-size: 1.5rem;
   text-align: center;
@@ -164,7 +165,9 @@ const getTMDBData = async (url, options, page) => {
   top: -3px;
   border-radius: 10px;
   box-shadow: 2px 2px black;
+  font-weight: bold;
 }
+
 .search-bar {
   text-align: center;
   font-size: 1.5rem;
@@ -180,7 +183,9 @@ const getTMDBData = async (url, options, page) => {
   position: relative;
   top: -3px;
   box-shadow: 2px 2px black;
+  font-weight: bold;
 }
+
 .purchase-page {
   background-color: rgb(0, 0, 0);
   min-height: 100vh;
@@ -207,6 +212,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+
 .dropdown {
   text-align: center;
   margin-block: 1rem;
@@ -214,6 +220,7 @@ h1 {
   top: 3.5rem;
   left: 5rem;
 }
+
 .movies {
   width: 15rem;
   margin-block: 1rem;
@@ -234,19 +241,24 @@ h1 {
   font-size: 1rem;
   height: 3rem;
   width: 5rem;
-  border-radius: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
 }
+
 .next-page {
   font-size: 1rem;
   height: 3rem;
   width: 5rem;
-  border-radius: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 2px;
 }
 
 p {
   position: relative;
   top: 0.5rem;
 }
+
 .cart {
   width: 5rem;
   border: solid white;

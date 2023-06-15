@@ -76,7 +76,6 @@ const movies = (
   padding: 1rem;
   border: none;
   background: #61839e;
-
   font-weight: bold;
   margin-top: 3rem;
   width: 9rem;
@@ -88,6 +87,7 @@ const movies = (
   height: 30rem;
   border-radius: 25px;
 }
+
 .data > * {
   margin-block: 1rem;
   font-size: 20px;

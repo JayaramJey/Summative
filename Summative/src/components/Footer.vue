@@ -37,12 +37,14 @@
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
 .footer-container {
   text-align: center;
   color: white;
   background-color: rgb(15, 14, 14);
   font-family: Roboto;
 }
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -59,6 +61,7 @@
   justify-content: center;
   margin-block: 3rem;
 }
+
 .logo {
   width: 2rem;
 }
