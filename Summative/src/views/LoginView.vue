@@ -33,17 +33,13 @@ const registerViaEmail = async () => {
 };
 
 const loginViaEmail = async () => {
-  try {
-    const { user } = await signInWithEmailAndPassword(
-      auth,
-      email.value,
-      passwordOne.value
-    );
-    store.user = user;
-    router.push("/purchase");
-  } catch (error) {
-    console.log(error);
-  }
+  const { user } = await signInWithEmailAndPassword(
+    auth,
+    email.value,
+    passwordOne.value
+  );
+  store.user = user;
+  router.push("/purchase");
 };
 
 const registerViaGoogle = async () => {
@@ -71,7 +67,7 @@ const registerViaGoogle = async () => {
       </div>
       <div class="register-email">
         <h1>Register via Email</h1>
-        <form class="setup" @submit.prevent="registerViaEmail()">
+        <form class="email-setup" @submit.prevent="registerViaEmail()">
           <input v-model="email" type="email" placeholder="Email" />
           <input
             v-model="passwordOne"
@@ -119,10 +115,10 @@ const registerViaGoogle = async () => {
   background-size: cover;
 }
 
-.title{
+.title {
   position: absolute;
-  top:1rem; 
-  color:rgba(255, 255, 255, 0.716);
+  top: 1rem;
+  color: rgba(255, 255, 255, 0.716);
 }
 .login-functions {
   display: flex;
@@ -155,7 +151,7 @@ h1 {
 .email-login {
   margin-top: 3rem;
 }
-.setup {
+.email-setup {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -166,6 +162,7 @@ input {
   border-radius: 10px;
   font-size: 1rem;
   height: 2rem;
+  box-shadow: 5px 5px;
 }
 .login {
   display: flex;
@@ -178,7 +175,7 @@ button {
   height: 4rem;
   border-radius: 20px;
   font-size: 1rem;
-}
+  }
 
 .register-button {
   position: relative;

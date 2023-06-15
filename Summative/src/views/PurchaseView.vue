@@ -45,7 +45,7 @@ const getTMDBData = async (url, options, page) => {
         <input
           class="search-bar"
           type="search"
-          placeholder="Enter search items"
+          placeholder="Enter movie title"
           v-model="search"
         />
         <button
@@ -113,7 +113,7 @@ const getTMDBData = async (url, options, page) => {
     <div class="page-change">
       <div class="pagination">
         <button
-          class="previous"
+          class="previous-page"
           @click="
             getTMDBData(
               currentURL,
@@ -129,7 +129,7 @@ const getTMDBData = async (url, options, page) => {
         </button>
         <p>{{ `Page ${page} of ${totalPages}` }}</p>
         <button
-          class="next"
+          class="next-page"
           @click="
             getTMDBData(
               currentURL,
@@ -230,13 +230,13 @@ h1 {
   right: 8rem;
 }
 
-.previous {
+.previous-page {
   font-size: 1rem;
   height: 3rem;
   width: 5rem;
   border-radius: 1rem;
 }
-.next {
+.next-page {
   font-size: 1rem;
   height: 3rem;
   width: 5rem;
