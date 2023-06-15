@@ -40,6 +40,7 @@ const loginViaEmail = async () => {
   );
   store.user = user;
   const cart = await getDoc(doc(firestore, "carts", user.email));
+
   if (cart.exists()) {
     store.cart = cart.data().cart;
   } else {
