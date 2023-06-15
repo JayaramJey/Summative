@@ -4,7 +4,6 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 const store = useStore();
-
 </script>
 
 <template>
@@ -17,13 +16,14 @@ const store = useStore();
     />
 
     <div class="cart-movies">
-      <div v-for="movies in store.cart">
+      <div v-for="(movies, index) in store.cart" :key="index">
         
         <h1>{{ movies.title }}</h1>
         <img
           class="poster"
           :src="`https://image.tmdb.org/t/p/w500/${movies.poster}`"
         />
+        <img class="remove" @click="store.removeMovieFromCart(index)" src="https://cutewallpaper.org/24/recycle-bin-icon-png/thin-recycle-bin-delete-garbage-comments-recycle-bin-white-icon-transparent-png-980x982-free-download-on-nicepng.png"/>
       </div>
     </div>
   </div>
@@ -44,6 +44,11 @@ const store = useStore();
 
 .cart-movies > * {
   margin: 1rem;
+}
+
+.remove{
+  width:2rem;
+  margin-left: 1rem;
 }
 .poster {
   height: 20rem;
@@ -66,4 +71,6 @@ const store = useStore();
   text-align: center;
   font-size: 4rem;
 }
+
+
 </style>

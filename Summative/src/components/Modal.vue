@@ -76,7 +76,7 @@ const movies = (
   padding: 1rem;
   border: none;
   background: #61839e;
-  
+
   font-weight: bold;
   margin-top: 3rem;
   width: 9rem;

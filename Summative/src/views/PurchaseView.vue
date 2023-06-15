@@ -87,7 +87,6 @@ const getTMDBData = async (url, options, page) => {
             @click="
               getTMDBData('https://api.themoviedb.org/3/discover/movie', {
                 with_genres: genre,
-                search:genre,
               })
             "
           >
@@ -120,6 +119,7 @@ const getTMDBData = async (url, options, page) => {
               currentURL,
               {
                 query: search,
+                with_genres: genre,
               },
               page === 1 ? 1 : page--
             )
@@ -134,6 +134,7 @@ const getTMDBData = async (url, options, page) => {
             getTMDBData(
               currentURL,
               {
+                with_genres: genre,
                 query: search,
               },
               page >= totalPages ? totalPages : page++
@@ -191,7 +192,7 @@ h1 {
   color: rgb(173, 148, 4);
   background-color: navy;
   height: 7rem;
-  font-size:3rem;
+  font-size: 3rem;
   text-decoration: underline;
 }
 
@@ -221,7 +222,7 @@ h1 {
 
 .pagination {
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
   color: white;
   font-size: 1.2rem;
   position: absolute;
