@@ -23,7 +23,7 @@ const getTMDBData = async (url, options, page) => {
   movies.value = (
     await axios.get(url, {
       params: {
-        api_key: "d12bc392b936057172b72cd0f1772bf7",
+        api_key: import.meta.env.VITE_API_KEY,
         region: "US",
         language: "en",
         include_adult: false,
