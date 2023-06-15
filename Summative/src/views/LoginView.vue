@@ -45,7 +45,7 @@ const loginViaEmail = async () => {
     store.cart = cart.data().cart;
   } else {
     await setDoc(doc(firestore, "carts", user.email), { cart: [] });
-    store.cart = cart.data().cart;
+    store.cart = [cart.data().cart];
   }
   router.push("/purchase");
 };
@@ -59,7 +59,7 @@ const registerViaGoogle = async () => {
     store.cart = cart.data().cart;
   } else {
     await setDoc(doc(firestore, "carts", user.email), { cart: [] });
-    store.cart = cart.data().cart;
+    store.cart = [];
   }
   router.push("/purchase");
 };
@@ -188,6 +188,7 @@ button {
   border-radius: 20px;
   font-size: 1rem;
   font-weight: bold;
+  cursor:pointer;
 }
 
 .register-button {

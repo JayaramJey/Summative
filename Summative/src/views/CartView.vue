@@ -37,7 +37,7 @@ const store = useStore();
 .cart-movies {
   text-align: center;
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
 }
 
 .cart-page {
@@ -54,6 +54,7 @@ const store = useStore();
 .remove {
   width: 2rem;
   margin-left: 1rem;
+  cursor:pointer;
 }
 
 .poster {
@@ -68,6 +69,7 @@ const store = useStore();
   position: relative;
   bottom: 4.5rem;
   left: 1rem;
+  cursor:pointer;
 }
 
 .page-title {

@@ -20,7 +20,7 @@ export const useStore = defineStore("store", {
     },
     removeMovieFromCart(index) {
       this.cart.splice(index, 1);
-      delete setDoc(doc(firestore, "carts", this.user.email), {
+      setDoc(doc(firestore, "carts", this.user.email), {
         cart: this.cart,
       });
     },
