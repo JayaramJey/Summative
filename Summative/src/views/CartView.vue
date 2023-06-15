@@ -17,8 +17,8 @@ const store = useStore();
 
     <div class="cart-movies">
       <div v-for="(movies, index) in store.cart" :key="index">
-        
-        <h1>{{ movies.title }}</h1>
+        <div></div>
+        <h1 class="movie-title">{{ movies.title }}</h1>
         <img
           class="poster"
           :src="`https://image.tmdb.org/t/p/w500/${movies.poster}`"
@@ -70,6 +70,11 @@ const store = useStore();
   height: 5rem;
   text-align: center;
   font-size: 4rem;
+}
+
+.movie-title{
+  position: relative;
+  right:1rem;
 }
 
 
