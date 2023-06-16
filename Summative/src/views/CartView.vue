@@ -19,10 +19,7 @@ const store = useStore();
       <div v-for="(movies, index) in store.cart" :key="index">
         <div></div>
         <h1 class="movie-title">{{ movies.title }}</h1>
-        <img
-          class="poster"
-          :src="`https://image.tmdb.org/t/p/w500/${movies.poster}`"
-        />
+        <img class="poster" :src="`https://image.tmdb.org/t/p/w500/${movies.poster}`" />
         <img
           class="remove"
           @click="store.removeMovieFromCart(index)"
@@ -54,7 +51,7 @@ const store = useStore();
 .remove {
   width: 2rem;
   margin-left: 1rem;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .poster {
@@ -69,7 +66,7 @@ const store = useStore();
   position: relative;
   bottom: 4.5rem;
   left: 1rem;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .page-title {

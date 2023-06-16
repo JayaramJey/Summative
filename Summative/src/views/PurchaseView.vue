@@ -156,7 +156,7 @@ const getTMDBData = async (url, options, page) => {
   font-size: 1.5rem;
   text-align: center;
   border-radius: 10px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .get-movies {
@@ -167,7 +167,7 @@ const getTMDBData = async (url, options, page) => {
   border-radius: 10px;
   box-shadow: 2px 2px black;
   font-weight: bold;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .search-bar {
@@ -186,7 +186,7 @@ const getTMDBData = async (url, options, page) => {
   top: -3px;
   box-shadow: 2px 2px black;
   font-weight: bold;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .purchase-page {
@@ -228,7 +228,7 @@ h1 {
   width: 15rem;
   margin-block: 1rem;
   border: solid white;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .pagination {
@@ -247,7 +247,7 @@ h1 {
   width: 5rem;
   border-radius: 10px;
   font-weight: bold;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .next-page {
@@ -257,7 +257,7 @@ h1 {
   border-radius: 10px;
   font-weight: bold;
   padding: 2px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 p {
@@ -271,6 +271,6 @@ p {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  cursor:pointer;
+  cursor: pointer;
 }
 </style>

@@ -16,6 +16,8 @@ const router = useRouter();
 const email = ref("");
 const passwordOne = ref("");
 const passwordTwo = ref("");
+const emailTwo = ref("");
+const passwordLogin = ref("");
 
 const registerViaEmail = async () => {
   if (passwordOne.value !== passwordTwo.value) {
@@ -29,14 +31,16 @@ const registerViaEmail = async () => {
     passwordOne.value
   );
   store.user = user;
+  emailTwo.value = email.value;
+  passwordLogin.value = passwordOne.value;
   router.push("/purchase");
 };
 
 const loginViaEmail = async () => {
   const { user } = await signInWithEmailAndPassword(
     auth,
-    email.value,
-    passwordOne.value
+    emailTwo.value,
+    passwordLogin.value
   );
   store.user = user;
   const cart = await getDoc(doc(firestore, "carts", user.email));
@@ -94,9 +98,9 @@ const registerViaGoogle = async () => {
         <div class="email-login">
           <h1>Login via Email</h1>
           <form class="login" @submit.prevent="loginViaEmail()">
-            <input v-model="email" type="email" placeholder="Email" />
+            <input v-model="emailTwo" type="email" placeholder="Email" />
             <input
-              v-model="passwordOne"
+              v-model="passwordLogin"
               type="password"
               placeholder="Password"
             />
@@ -188,7 +192,7 @@ button {
   border-radius: 20px;
   font-size: 1rem;
   font-weight: bold;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .register-button {

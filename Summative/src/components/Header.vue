@@ -37,6 +37,6 @@ const router = useRouter();
   top: 1rem;
   font-size: 1rem;
   font-weight: bold;
-  cursor:pointer;
+  cursor: pointer;
 }
 </style>

@@ -5,8 +5,8 @@
     <div class="background-darkening">
       <div class="content">
         <h1>
-          Watch all your favourite movies from the comfort of your home right
-          here on MovieMax
+          Watch all your favourite movies from the comfort of your home right here on
+          MovieMax
         </h1>
       </div>
     </div>

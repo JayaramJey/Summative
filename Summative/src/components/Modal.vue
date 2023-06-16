@@ -81,7 +81,7 @@ const movies = (
   width: 9rem;
   height: 4rem;
   border-radius: 20px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .posters {
@@ -99,6 +99,6 @@ const movies = (
   height: 4rem;
   border-radius: 20px;
   font-size: 1rem;
-  cursor:pointer;
+  cursor: pointer;
 }
 </style>
