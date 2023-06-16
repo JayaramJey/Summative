@@ -49,7 +49,7 @@ const loginViaEmail = async () => {
     store.cart = cart.data().cart;
   } else {
     await setDoc(doc(firestore, "carts", user.email), { cart: [] });
-    store.cart = [cart.data().cart];
+    store.cart = [];
   }
   router.push("/purchase");
 };
