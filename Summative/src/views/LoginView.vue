@@ -33,6 +33,7 @@ const registerViaEmail = async () => {
   store.user = user;
   emailTwo.value = email.value;
   passwordLogin.value = passwordOne.value;
+  await setDoc(doc(firestore, "carts", user.email), { cart: [] });
   router.push("/purchase");
 };
 
